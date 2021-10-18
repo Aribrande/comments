@@ -4,15 +4,19 @@
             <div class="card mt-5">
                 <div class="card-header">Komenarų sistema</div>
                 <div class="card-body">
-                    
+                 
                     <ul class="list-group" *ngIf="!loading" >
-                        <li class="list-group-item" *ngFor="let komentaras of komentarai">
-                            <b>{{ komentaras.email }}:</b>
+                        <li class="list-group-item" *ngFor="let komentaras of komentarai" spalvink [selectedColor]="'green'">
+                            <i class="bi bi-star-fill" *ngFor="let zvaigzdute of [].constructor( '4'*1 )" ></i>
+                            
+                            
+                            <br><br> 
+                            <b >{{ komentaras.email }}: </b>
                             {{komentaras.text}}
                         </li>
                     </ul>
                     
-                    <div class="alert alert-info" *ngIf="loading && !error">Kraunasi ...</div>
+                    <div class="alert alert-info" *ngIf="loading && !error" >Kraunasi ...</div>
                     <div class="alert alert-danger" *ngIf="error">
                         <h1>Įvyko klaida</h1>
                         <p>{{ error }}</p>

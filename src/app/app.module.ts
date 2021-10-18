@@ -7,13 +7,19 @@ import { Test2Component } from './test2/test2.component';
 import { TestasService } from './testas.service';
 import { KomentaraiComponent } from './komentarai/komentarai.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SpalvinkDirective } from './spalvink.directive';
+import { TestDropdowComponent } from './test-dropdow/test-dropdow.component';
+import { DropdownDirective } from './dropdown.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     Test1Component,
     Test2Component,
-    KomentaraiComponent
+    KomentaraiComponent,
+    SpalvinkDirective,
+    TestDropdowComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

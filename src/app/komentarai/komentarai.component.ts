@@ -9,13 +9,15 @@ import { Komentaras } from '../komentaras.model';
   styleUrls: ['./komentarai.component.css']
 })
 export class KomentaraiComponent implements OnInit, OnDestroy {
-
+ 
   public komentarai:Komentaras[]=[];
   public loading:boolean=false;
   public error:string;
   public errorSubscription:Subscription;
   @ViewChild('email', {static:true})  email:ElementRef<HTMLInputElement>;
   @ViewChild('text', {static:true})  text:ElementRef<HTMLInputElement>;
+
+ 
 
   constructor( private komentaraiService:KomentaraiService ) { }
 
@@ -52,5 +54,10 @@ export class KomentaraiComponent implements OnInit, OnDestroy {
   ngOnDestroy(){
     this.errorSubscription.unsubscribe();
   }
+
+  parseInt(s:string):number{
+    return parseInt(s);
+  }
+
 
 }
