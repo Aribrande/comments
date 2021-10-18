@@ -10,6 +10,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SpalvinkDirective } from './spalvink.directive';
 import { TestDropdowComponent } from './test-dropdow/test-dropdow.component';
 import { DropdownDirective } from './dropdown.directive';
+import { ProgressBarDirective } from './progress-bar.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DropdownDirective } from './dropdown.directive';
     KomentaraiComponent,
     SpalvinkDirective,
     TestDropdowComponent,
-    DropdownDirective
+    DropdownDirective,
+    ProgressBarDirective,
   ],
   imports: [
     BrowserModule,
