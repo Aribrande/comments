@@ -11,6 +11,9 @@ import { SpalvinkDirective } from './spalvink.directive';
 import { TestDropdowComponent } from './test-dropdow/test-dropdow.component';
 import { DropdownDirective } from './dropdown.directive';
 import { ProgressBarDirective } from './progress-bar.directive';
+import { RegistracijaComponent } from './registracija/registracija.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,10 +25,12 @@ import { ProgressBarDirective } from './progress-bar.directive';
     TestDropdowComponent,
     DropdownDirective,
     ProgressBarDirective,
+    RegistracijaComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [ TestasService ],
   bootstrap: [AppComponent]
