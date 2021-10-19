@@ -13,6 +13,7 @@ import { DropdownDirective } from './dropdown.directive';
 import { ProgressBarDirective } from './progress-bar.directive';
 import { RegistracijaComponent } from './registracija/registracija.component';
 import { FormsModule } from '@angular/forms';
+import { UsedEmailDirective } from './used-email.directive';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     DropdownDirective,
     ProgressBarDirective,
     RegistracijaComponent,
+    UsedEmailDirective,
   ],
   imports: [
     BrowserModule,
