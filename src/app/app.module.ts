@@ -12,8 +12,10 @@ import { TestDropdowComponent } from './test-dropdow/test-dropdow.component';
 import { DropdownDirective } from './dropdown.directive';
 import { ProgressBarDirective } from './progress-bar.directive';
 import { RegistracijaComponent } from './registracija/registracija.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsedEmailDirective } from './used-email.directive';
+import { AppRoutesModule } from './app-routes/app-routes.module';
+import { RezervacijaComponent } from './rezervacija/rezervacija.component';
 
 
 @NgModule({
@@ -28,11 +30,14 @@ import { UsedEmailDirective } from './used-email.directive';
     ProgressBarDirective,
     RegistracijaComponent,
     UsedEmailDirective,
+    RezervacijaComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    AppRoutesModule,
+    ReactiveFormsModule,
   ],
   providers: [ TestasService ],
   bootstrap: [AppComponent]

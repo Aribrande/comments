@@ -13,15 +13,15 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Įveskite el. pašto adresą</label>
-                            <input type="text" class="form-control" ngModel name="email" required email usedEmail #email="ngModel">
+                            <input type="text" class="form-control" ngModel name="email" placeholder="El pašto formatas: vardas@domenas.lt" required email usedEmail #email="ngModel">
                             <span *ngIf="!email.valid && email.touched">
                                 <span *ngIf="email.errors.required" class="help-block">Neįvestas</span>
-                                <span *ngIf="email.errors.UsedEmail" class="help-block">Įvestas užimtas email</span>
+                                <span *ngIf="email.errors.UsedEmail" class="help-block">{{ email.errors.message }}</span>
                             </span>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Įveskite amžių</label>
-                            <input type="number" class="form-control" ngModel name="age" required min="16"  #age="ngModel">
+                            <input type="number" class="form-control" ngModel name="age" required [min]="minMetai"  #age="ngModel">
                             <span *ngIf="!age.valid && age.touched" class="help-block">Minimalus amžius 16 metų</span>
                         </div>
                         <div class="mb-3">

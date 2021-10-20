@@ -16,7 +16,8 @@ export class UsedEmailDirective implements Validator {
   validate(input: FormControl){
     if (input.value=="test@test.lt" || input.value=="g.gricius@ituostas.lt"){
       return {
-        UsedEmail:true
+        UsedEmail:true,
+        message:"Jusu el pastas: "+input.value+" jau užimtas"
       };
     }
     return null;

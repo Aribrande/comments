@@ -18,6 +18,7 @@ export class RegistracijaComponent implements OnInit {
     password:string,
     gender:string
   };
+  public minMetai=2020;
 
   ngOnInit(): void {
   }
@@ -25,7 +26,7 @@ export class RegistracijaComponent implements OnInit {
   onSubmit(){
     console.log("Submitinam formą");
     console.log(this.regForm);
-    /*
+   
     this.user={
       name:this.regForm.value.name,
       email:this.regForm.value.email,
@@ -33,6 +34,7 @@ export class RegistracijaComponent implements OnInit {
       password:this.regForm.value.password,
       gender:this.regForm.value.gender,
     }
+    /*
     console.log(this.user);
     this.regForm.reset();
     */
